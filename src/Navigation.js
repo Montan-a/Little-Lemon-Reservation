@@ -1,21 +1,31 @@
 export const Navigation = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="main-nav">
+      <ul className="nav-list">
         <li>
-          <a href="#">Home</a>
+          <a href="#" className="nav-list-item">
+            Home
+          </a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#" className="nav-list-item">
+            About
+          </a>
         </li>
         <li>
-          <a href="#">Reservation</a>
+          <a href="#" className="nav-list-item">
+            Reservation
+          </a>
         </li>
         <li>
-          <a href="#">Order online</a>
+          <a href="#" className="nav-list-item">
+            Order online
+          </a>
         </li>
         <li>
-          <a href="#">Login</a>
+          <a href="#" className="nav-list-item">
+            Login
+          </a>
         </li>
       </ul>
     </nav>

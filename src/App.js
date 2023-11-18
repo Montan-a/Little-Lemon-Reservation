@@ -7,8 +7,10 @@ import { Footer } from "./Footer";
 function App() {
   return (
     <>
-      <Header />
-      <Navigation />
+      <div className="nav-flex-box header-nav">
+        <Header />
+        <Navigation />
+      </div>
       <Main />
       <Footer />
     </>

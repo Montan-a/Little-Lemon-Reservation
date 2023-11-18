@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+/* 
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 /36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+
+SPACING SYSTEM (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 120
+
+PRIMARY COLORS: #495e57, #f4ce14
+
+SECONDARY COLORS: #ee9972, #fbdabb, #edefee, #333333
+
+Typefaces: Markazi Text, Karla
+
+font-sizes:
+Regular: 400
+Medium: 500
+Semibold:600
+bold: 700
+
+ */
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #edefee;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* GENERAL USE */
+.flex-box {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 9.6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.margin-bottom-xl-sm {
+  margin-bottom: 0.4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.margin-bottom-md {
+  margin-bottom: 1.6rem;
+}
+
+/* Header/Navigation */
+
+.nav-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.nav-list-item {
+  text-decoration: none;
+  color: #333333;
+  padding: 1.6rem;
+}
+
+/* Hero */
+.hero-section {
+  margin-bottom: 9.6rem;
+  padding: 3.2rem;
+  background-color: #495e57;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  color: #edefee;
+}
+
+.hero-title {
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: #f4ce14;
+}
+
+.hero-subtitle {
+  font-weight: 500;
+  font-size: 3.6rem;
+  color: #ee9972;
+}
+
+.hero-description {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.img-box img {
+  width: 50rem;
+  height: 40rem;
+}
+
+/* Footer */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fbdabb;
+  padding: 3.2rem 0;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer-list li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-list li:last-child {
+  margin-bottom: 0;
+}
+
+.list-item,
+.list-item-nav {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #333333;
+}
+
+.list-item-nav:link,
+.list-item-nav:visited {
+  text-decoration: none;
+}
+
+.list-item-nav:hover,
+.list-item-nav:active {
+  color: #edefee;
 }

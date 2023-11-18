@@ -1,3 +1,9 @@
+import { Hero } from "./Hero";
 export const Main = () => {
-  return <main></main>;
+  return (
+    <main>
+      <Hero />
+      <section className="menu-section"></section>
+    </main>
+  );
 };
