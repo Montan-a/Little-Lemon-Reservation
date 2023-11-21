@@ -44,6 +44,12 @@ body {
   gap: 9.6rem;
 }
 
+.sm-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .margin-bottom-xl-sm {
   margin-bottom: 0.4rem;
 }
@@ -112,6 +118,35 @@ body {
 .img-box img {
   width: 50rem;
   height: 40rem;
+}
+
+/* Menu */
+
+.dish-title {
+  font-size: 2rem;
+}
+
+.dish-price {
+  font-size: 2rem;
+}
+
+.dish-description {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.order-btn {
+  background-color: #f4ce14;
+  color: #333333;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+}
+
+.order-btn:hover {
+  background-color: #495e57;
+  color: #edefee;
 }
 
 /* Footer */
