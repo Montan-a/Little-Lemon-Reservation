@@ -2,7 +2,7 @@ import restaurant from "./icons_assets/restaurant.jpg";
 export const Hero = () => {
   return (
     <section className="hero-section">
-      <div className=" container flex-box">
+      <div className="container flex-box">
         <div className="text-box">
           <span className="hero-title margin-bottom-xl-sm">Little Lemon</span>
           <span className="hero-subtitle margin-bottom-md">Chicago</span>
