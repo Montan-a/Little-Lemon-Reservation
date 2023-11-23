@@ -57,6 +57,15 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.margin-bottom-xl-lg {
+  margin-bottom: 9.6rem;
+}
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  gap: 8.4rem;
+}
+
 /* Header/Navigation */
 
 .nav-flex-box {
@@ -84,12 +93,6 @@ body {
   margin-bottom: 9.6rem;
   padding: 3.2rem;
   background-color: #495e57;
-}
-
-.container {
-  width: 120rem;
-  margin: 0 auto;
-  gap: 8.4rem;
 }
 
 .text-box {
@@ -124,8 +127,48 @@ body {
 
 .menu-section {
   gap: 4.8rem;
+  margin-bottom: 9.6rem;
+  flex-direction: column;
 }
 
+.menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.subheading {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.menu-btn {
+  font-size: 2rem;
+  background-color: #f4ce14;
+  color: #333333;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+}
+
+.menu-btn:hover {
+  background-color: #495e57;
+  color: #edefee;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8.4rem;
+}
 .dish-img {
   margin: 0 auto;
   width: 100%;

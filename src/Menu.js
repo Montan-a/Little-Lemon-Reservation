@@ -28,15 +28,21 @@ const dishes = [
 
 export const Menu = () => {
   return (
-    <section className="menu-section flex-box">
-      {dishes.map((dish) => (
-        <MenuCard
-          title={dish.title}
-          price={dish.price}
-          description={dish.description}
-          image={dish.image}
-        />
-      ))}
+    <section className="menu-section container flex-box">
+      <div className="menu-heading">
+        <h2 className="subheading">Today's Specials</h2>
+        <button className="menu-btn">View the menu</button>
+      </div>
+      <div className="menu-card">
+        {dishes.map((dish) => (
+          <MenuCard
+            title={dish.title}
+            price={dish.price}
+            description={dish.description}
+            image={dish.image}
+          />
+        ))}
+      </div>
     </section>
   );
 };
