@@ -1,4 +1,4 @@
-import restaurant from "./icons_assets/restaurant.jpg";
+import restaurant from "../icons_assets/restaurant.jpg";
 export const Hero = () => {
   return (
     <section className="hero-section">

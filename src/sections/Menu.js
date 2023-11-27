@@ -1,7 +1,7 @@
 import { MenuCard } from "./MenuCard.js";
-import greekSalad from "./icons_assets/greek-salad.jpg";
-import bruchetta from "./icons_assets/bruchetta.svg";
-import lemonCake from "./icons_assets/lemon dessert.jpg";
+import greekSalad from "../icons_assets/greek-salad.jpg";
+import bruchetta from "../icons_assets/bruchetta.svg";
+import lemonCake from "../icons_assets/lemon dessert.jpg";
 
 const dishes = [
   {

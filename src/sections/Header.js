@@ -1,4 +1,4 @@
-import Logo from "./icons_assets/Logo.svg";
+import Logo from "../icons_assets/Logo.svg";
 
 export const Header = () => {
   return (

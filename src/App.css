@@ -11,6 +11,8 @@ PRIMARY COLORS: #495e57, #f4ce14
 
 SECONDARY COLORS: #ee9972, #fbdabb, #edefee, #333333
 
+Shades: #fef8f1
+
 Typefaces: Markazi Text, Karla
 
 font-sizes:
@@ -74,7 +76,7 @@ body {
   justify-content: space-around;
 }
 
-.nav-list {
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -129,6 +131,7 @@ body {
   gap: 4.8rem;
   margin-bottom: 9.6rem;
   flex-direction: column;
+  padding: 4.8rem 6.4rem;
 }
 
 .menu-heading {
@@ -201,12 +204,70 @@ body {
   color: #edefee;
 }
 
+/* Review */
+
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #495e57;
+  padding: 4.8rem 6.4rem;
+}
+
+.heading {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
+  color: #fef8f1;
+}
+
+.reviews {
+  gap: 8rem;
+}
+
+.review {
+  background-color: #fef8f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  width: 50rem;
+  padding: 2rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.customer-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.review-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+}
+
+.review-author {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.review-text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
 /* Footer */
 .footer-nav {
+  border-top: 0.5rem solid #f4ce14;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #fbdabb;
   padding: 3.2rem 0;
 }
 
