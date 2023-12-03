@@ -70,6 +70,15 @@ body {
 
 /* Header/Navigation */
 
+.header-nav {
+  padding: 0.8rem;
+}
+
+.main-header {
+  padding: 0.8rem;
+  border-bottom: 0.5rem solid #495e57;
+}
+
 .nav-flex-box {
   display: flex;
   align-items: center;
@@ -297,12 +306,22 @@ body {
 }
 
 .input-field {
-  height: 2.4rem;
   border: 0.1rem solid #333333;
   border-radius: 1.6rem;
   text-align: center;
   color: #333333;
   font-size: 1.4rem;
+}
+
+.occasion {
+  background-color: #dfe1fe;
+  border: none;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.occasion-placeholder {
+  color: #dfe1fe;
 }
 
 .submit-btn {

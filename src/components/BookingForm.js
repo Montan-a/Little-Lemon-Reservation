@@ -1,5 +1,4 @@
 import { useState } from "react";
-import restaurant from "../icons_assets/restaurant.jpg";
 
 export const BookingForm = () => {
   const [reserve, setReserve] = useState({
@@ -8,10 +7,11 @@ export const BookingForm = () => {
     email: "",
     telephone: "",
     date: "",
-    time: "17:00",
-    numOfGuest: 1,
-    occasion: "Birthday",
+    time: "",
+    numOfGuest: null,
+    occasion: "",
   });
+
   const handleChange = (e) => {
     setReserve({
       ...reserve,
@@ -34,6 +34,7 @@ export const BookingForm = () => {
           type="text"
           id="first-name"
           className="input-field contact-info"
+          placeholder="First Name"
           value={reserve.firstName}
           onChange={handleChange}
           name="firstName"
@@ -47,6 +48,7 @@ export const BookingForm = () => {
           type="text"
           id="last-name"
           className="input-field contact-info"
+          placeholder="Last name"
           value={reserve.lastName}
           onChange={handleChange}
           name="lastName"
@@ -125,7 +127,7 @@ export const BookingForm = () => {
         </select>
       </div>
       <div className="data-field">
-        <label htmlFor="guests" className="gufield-title">
+        <label htmlFor="guests" className="field-title">
           Number of guests
         </label>
         <input
@@ -141,7 +143,7 @@ export const BookingForm = () => {
         />
       </div>
       <div className="data-field">
-        <label htmlFor="occasion" className="occafield-title">
+        <label htmlFor="occasion" className="field-title">
           Occasion
         </label>
         <select
@@ -149,9 +151,12 @@ export const BookingForm = () => {
           id="occasion"
           value={reserve.occasion}
           onChange={handleChange}
-          className="input-field"
+          className="input-field occasion"
           placeholder="What's the occasion?"
         >
+          <option value="" className="occasion-placeholder">
+            -- Choose an occasion --
+          </option>
           <option value="Birthday" className="occasion-option">
             Birthday
           </option>

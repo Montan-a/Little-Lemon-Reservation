@@ -1,11 +1,11 @@
 import { BookingForm } from "../components/BookingForm";
 import { Footer } from "../sections/Footer";
-import { Header } from "../sections/Header";
+import { NavBar } from "../sections/NavBar";
 
 export const Booking = () => {
   return (
     <>
-      <Header />
+      <NavBar />
       <BookingForm />
       <Footer />
     </>

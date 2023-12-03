@@ -1,6 +1,5 @@
-import Home from "../pages/Home";
-import { Booking } from "../pages/Bookings";
 import { Link } from "react-router-dom";
+import { BreadCrumbs } from "../hooks/pageView";
 
 export const Navigation = () => {
   return (
