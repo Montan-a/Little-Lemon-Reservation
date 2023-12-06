@@ -72,9 +72,7 @@ body {
 
 .header-nav {
   padding: 0.8rem;
-}
-
-.main-header {
+  width: 100%;
   padding: 0.8rem;
   border-bottom: 0.5rem solid #495e57;
 }
@@ -125,6 +123,7 @@ body {
 }
 
 .hero-description {
+  width: 50rem;
   font-size: 1.6rem;
   line-height: 1;
 }
@@ -273,6 +272,13 @@ body {
 
 /* Booking */
 
+.booking-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .booking-form {
   display: flex;
   align-items: center;
@@ -280,8 +286,12 @@ body {
   flex-direction: column;
   gap: 2.4rem;
 
+  background-color: #fbdabb;
+  border-radius: 1.6rem;
+  width: 75rem;
   padding: 4.8rem;
-  margin-bottom: 9.6rem;
+
+  margin: 9.6rem 0;
   /* 
   background-image: url("./icons_assets/restaurant.jpg");
   background-repeat: no-repeat;
@@ -313,6 +323,12 @@ body {
   font-size: 1.4rem;
 }
 
+.non-valid {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #b91c1c;
+}
+
 .occasion {
   background-color: #dfe1fe;
   border: none;
@@ -340,6 +356,12 @@ body {
   color: #edefee;
 }
 
+.submit-btn:disabled {
+  content: "...Submitting";
+  background-color: #333333;
+  color: #dfe1fe;
+}
+
 /* Footer */
 .footer-nav {
   border-top: 0.5rem solid #f4ce14;
@@ -347,6 +369,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 3.2rem 0;
+  width: 100%;
 }
 
 .footer-list {
