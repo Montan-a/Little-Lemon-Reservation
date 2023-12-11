@@ -20,7 +20,7 @@ export function Carousel({ items }) {
     return () => clearInterval(interval);
   });
   return (
-    <div className="reviews flex-box carousel-containier ">
+    <div className="reviews flex-box">
       {items.map((item, index) => {
         return (
           <Card
