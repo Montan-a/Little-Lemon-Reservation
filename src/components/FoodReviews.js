@@ -1,6 +1,8 @@
 import customerImg_1 from "../img/user_1.jpg";
 import customerImg_2 from "../img/user_2.jpg";
 import customerImg_3 from "../img/user_3.jpg";
+import customerImg_4 from "../icons_assets/Mario and Adrian A.jpg";
+import customerImg_5 from "../img/user_4.jpg";
 import { Carousel } from "./Carousel";
 
 export const UserReviews = () => {
@@ -22,6 +24,17 @@ export const UserReviews = () => {
       image: customerImg_1,
       review:
         "The food was great. I had to the chicken alfedo and my friendhad greek salad",
+    },
+    {
+      name: "Mario Mario",
+      image: customerImg_4,
+      review:
+        "The bruchetta was okay, and we had to wait about an hour for our main entrées",
+    },
+    {
+      name: "Sofia Gregg",
+      image: customerImg_5,
+      review: "It was fine",
     },
   ];
   return (

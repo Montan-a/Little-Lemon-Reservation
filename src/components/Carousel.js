@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Card } from "@chakra-ui/react";
 
 export function Carousel({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,23 +23,17 @@ export function Carousel({ items }) {
     <div className="reviews flex-box carousel-containier ">
       {items.map((item, index) => {
         return (
-          <div>
-            <figure
-              className="review carousel-item"
-              style={{ transform: `translate(-${currentIndex * 100}%)` }}
-              key={index}
-            >
-              <img
-                src={item.image}
-                alt="customer image"
-                className="customer-img"
-              />
-              <div className="review-content">
-                <span className="review-author">{item.name}</span>
-                <blockquote className="review-text">{item.review}</blockquote>
-              </div>
-            </figure>
-          </div>
+          <Card
+            className="review carousel-item"
+            style={{ transform: `translate(-${currentIndex * 100}%)` }}
+            key={index}
+          >
+            <img src={item.image} alt="customer " className="customer-img" />
+            <div className="review-content">
+              <span className="review-author">{item.name}</span>
+              <blockquote className="review-text">{item.review}</blockquote>
+            </div>
+          </Card>
         );
       })}
     </div>
