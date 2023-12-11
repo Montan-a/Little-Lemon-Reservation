@@ -3,7 +3,7 @@ import { Navigation } from "./Navigation";
 
 export function NavBar() {
   return (
-    <div className="nav-flex-box header-nav">
+    <div className="nav-flex-box header-nav margin-bottom-md">
       <Header />
 
       <Navigation />

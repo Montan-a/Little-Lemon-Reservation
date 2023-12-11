@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Main } from "./sections/Main";
+import { Main } from "./components/PageRoutes";
 
 function App() {
   return (
