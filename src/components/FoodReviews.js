@@ -3,9 +3,11 @@ import customerImg_2 from "../img/user_2.jpg";
 import customerImg_3 from "../img/user_3.jpg";
 import customerImg_4 from "../icons_assets/Mario and Adrian A.jpg";
 import customerImg_5 from "../img/user_4.jpg";
-import { Carousel } from "./Carousel";
+import { Carousel } from "./Carousel.js";
+import { Card } from "@chakra-ui/react";
 
 export const UserReviews = () => {
+  const CAROUSEL_DELAY = 5000;
   const customers = [
     {
       name: "Julie McAllen",
@@ -37,13 +39,29 @@ export const UserReviews = () => {
       review: "It was fine",
     },
   ];
+
   return (
     <section className="review-section margin-bottom-xl-lg ">
       <div className="review-container">
         <span className="heading">Reviews</span>
-        <div className="carousel-container">
-          <Carousel items={customers} />
-        </div>
+        <Carousel delay={CAROUSEL_DELAY}>
+          {customers.map((customer) => (
+            <Card className="review carousel-item">
+              <img
+                src={customer.image}
+                alt="customer "
+                className="customer-img"
+              />
+
+              <div className="review-content">
+                <span className="review-author">{customer.name}</span>
+                <blockquote className="review-text">
+                  {customer.review}
+                </blockquote>
+              </div>
+            </Card>
+          ))}
+        </Carousel>
       </div>
     </section>
   );

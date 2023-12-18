@@ -48,7 +48,7 @@ body {
 .carousel-container {
   background-color: #ee9972;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .carousel-item {
@@ -60,6 +60,7 @@ body {
   justify-content: space-between;
   gap: 2.4rem;
   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  flex-shrink: 2;
 }
 
 .flex-box {
@@ -294,6 +295,12 @@ body {
 .review-text {
   font-size: 1.4rem;
   line-height: 1.5;
+}
+
+.carousel-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #dfe1fe;
 }
 
 /* Booking */

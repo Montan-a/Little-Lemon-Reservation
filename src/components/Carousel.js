@@ -1,41 +1,61 @@
 import { useState, useEffect } from "react";
 import { Card } from "@chakra-ui/react";
+import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
+import { IconContext } from "react-icons/lib";
 
-export function Carousel({ items }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const carouselInfiniteScroll = () => {
-    if (currentIndex === items.length - 1) {
-      return setCurrentIndex(0);
-    }
-
-    return setCurrentIndex(currentIndex + 1);
-  };
+export const Carousel = ({ delay, children }) => {
+  const [current, setCurrent] = useState(0);
+  const [timer, setTimer] = useState(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      carouselInfiniteScroll();
-    }, 3000);
+    // Start the timer to switch to the next item
+    setTimer(
+      setTimeout(() => {
+        setCurrent((current + 1) % children.length);
+      }, delay)
+    );
 
-    return () => clearInterval(interval);
-  });
+    // Clear the timer on unmount
+    return () => clearTimeout(timer);
+  }, [current, delay, children.length, timer]);
+
+  const handleNext = () => {
+    // Reset the timer and switch to the next item
+    clearTimeout(timer);
+    setCurrent((current + 1) % children.length);
+    setTimer(
+      setTimeout(() => {
+        setCurrent((current + 1) % children.length);
+      }, delay)
+    );
+  };
+
+  const handlePrevious = () => {
+    // Reset the timer and switch to the previous item
+    clearTimeout(timer);
+    setCurrent((current - 1 + children.length) % children.length);
+    setTimer(
+      setTimeout(() => {
+        setCurrent((current + 1) % children.length);
+      }, delay)
+    );
+  };
+
   return (
-    <div className="reviews flex-box">
-      {items.map((item, index) => {
-        return (
-          <Card
-            className="review carousel-item"
-            style={{ transform: `translate(-${currentIndex * 100}%)` }}
-            key={index}
-          >
-            <img src={item.image} alt="customer " className="customer-img" />
-            <div className="review-content">
-              <span className="review-author">{item.name}</span>
-              <blockquote className="review-text">{item.review}</blockquote>
-            </div>
-          </Card>
-        );
-      })}
+    <div className="carousel">
+      {children.length > 0 && (
+        <div className="current">{children[current]}</div>
+      )}
+      {children.length > 1 && (
+        <div className="buttons">
+          <button className="button-next" onClick={handlePrevious}>
+            <VscArrowLeft />
+          </button>
+          <button className="button-previous" onClick={handleNext}>
+            <VscArrowRight />
+          </button>
+        </div>
+      )}
     </div>
   );
-}
+};
