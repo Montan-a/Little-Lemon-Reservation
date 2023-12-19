@@ -1,23 +1,10 @@
 import { useState, useEffect } from "react";
 
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
-import { IconContext } from "react-icons/lib";
 
 export const Carousel = ({ delay, children }) => {
   const [current, setCurrent] = useState(0);
   const [timer, setTimer] = useState(null);
-
-  // useEffect(() => {
-  //   // Start the timer to switch to the next item
-  //   setTimer(
-  //     setTimeout(() => {
-  //       setCurrent((current + 1) % children.length);
-  //     }, delay)
-  //   );
-
-  //   // Clear the timer on unmount
-  //   return () => clearTimeout(timer);
-  // }, [current, delay, children.length, timer]);
 
   const handleNext = () => {
     // Reset the timer and switch to the next item

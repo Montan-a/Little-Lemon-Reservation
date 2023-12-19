@@ -63,6 +63,31 @@ export const UserReviews = () => {
           ))}
         </Carousel>
       </div>
+
+      <div className="form-container">
+        <form className="review-form">
+          <div className="data-field">
+            <label htmlFor="fullName" className="field-title">
+              Full Name
+            </label>
+            <input
+              type="text"
+              className="input-field "
+              placeholder="Your Name"
+            />
+          </div>
+
+          <div className="data-field">
+            <label htmlFor="review" className="field-title">
+              Review
+            </label>
+            <textarea
+              className="lg-input-field"
+              placeholder="We hope you enjoyed your visit"
+            ></textarea>
+          </div>
+        </form>
+      </div>
     </section>
   );
 };
