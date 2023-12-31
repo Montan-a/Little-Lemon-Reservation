@@ -21,6 +21,8 @@ Medium: 500
 Semibold:600
 bold: 700
 
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+
  */
 
 * {
@@ -33,7 +35,7 @@ html {
 }
 
 body {
-  background-color: #edefee;
+  background-color: #dbdfdd;
   font-family: "Karla", sans-serif;
   font-weight: 400;
 }
@@ -206,12 +208,16 @@ body {
   color: #edefee;
 }
 
-.menu-card {
+.menu-card-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 8.4rem;
+}
+
+.card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 }
 .dish-img {
   margin: 0 auto;
@@ -246,23 +252,29 @@ body {
 }
 
 /* Review */
-
-.review-container {
+.review-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  background-color: #ee9972;
+  padding: 4.8rem 6.4rem;
+  border-radius: 1.6rem;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+
   padding: 4.8rem 6.4rem;
   overflow: hidden;
-  border-radius: 1.6rem;
 }
 
 .heading {
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 4.8rem;
-  color: #fef8f1;
+  color: #333333;
 }
 
 .reviews {
@@ -274,7 +286,6 @@ body {
   width: 48rem;
   height: auto;
   padding: 2rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 
   line-height: 1.6;
   margin-bottom: 2.4rem;
@@ -314,8 +325,26 @@ body {
 .btn-next,
 .btn-prev {
   font-size: 3.2rem;
-  font-weight: 500;
-  color: #edefee;
+
+  color: #333333;
+  background-color: #fef8f1;
+  padding: 1.6rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.btn-next:hover,
+.btn-prev:hover {
+  color: #ee9972;
+  background-color: #edefee;
+}
+
+.review-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4.8rem;
 }
 
 /* Booking */
@@ -406,8 +435,9 @@ body {
   width: 20rem;
 
   padding: 1.6rem;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
+  transition: all 0.5s;
 }
 
 .submit-btn:hover {
@@ -463,5 +493,5 @@ body {
 
 .list-item-nav:hover,
 .list-item-nav:active {
-  color: #edefee;
+  color: #ee9972;
 }

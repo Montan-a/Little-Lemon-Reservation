@@ -1,6 +1,9 @@
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react";
 
 export const MenuCard = ({ title, price, description, image }) => {
+  const style = {
+    boxShadow: "0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);",
+  };
   return (
     <Card w="40rem">
       <CardHeader>

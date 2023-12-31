@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { IconContext } from "react-icons/lib";
 
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
@@ -7,25 +8,11 @@ export const Carousel = ({ delay, children }) => {
   const [timer, setTimer] = useState(null);
 
   const handleNext = () => {
-    // Reset the timer and switch to the next item
-    clearTimeout(timer);
     setCurrent((current + 1) % children.length);
-    setTimer(
-      setTimeout(() => {
-        setCurrent((current + 1) % children.length);
-      }, delay)
-    );
   };
 
   const handlePrevious = () => {
-    // Reset the timer and switch to the previous item
-    clearTimeout(timer);
     setCurrent((current - 1 + children.length) % children.length);
-    setTimer(
-      setTimeout(() => {
-        setCurrent((current + 1) % children.length);
-      }, delay)
-    );
   };
 
   return (

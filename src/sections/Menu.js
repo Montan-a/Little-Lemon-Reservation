@@ -33,7 +33,7 @@ export const Menu = () => {
         <h2 className="subheading">Today's Specials</h2>
         <button className="menu-btn">View the menu</button>
       </div>
-      <div className="menu-card">
+      <div className="menu-card-container">
         {dishes.map((dish) => (
           <MenuCard
             title={dish.title}
