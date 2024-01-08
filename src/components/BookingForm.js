@@ -82,117 +82,131 @@ export const BookingForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="booking-form">
-      <div className="data-field">
-        <label htmlFor="firstName" className="field-title">
-          Full Name
-        </label>
-        <input
-          type="text"
-          id="first-name"
-          className="input-field contact-info"
-          placeholder="John Doe"
-          value={reserve.fullName}
-          onChange={handleChange}
-          name="fullName"
-        />
-        <span className="non-valid">{formError.name}</span>
+      <div className="flex-box--column">
+        <div className="data-field">
+          <label htmlFor="fullName" id="fullName" className="field-title">
+            Full Name
+          </label>
+          <input
+            type="text"
+            id="full-name"
+            className="input-field contact-info"
+            placeholder="John Doe"
+            value={reserve.fullName}
+            onChange={handleChange}
+            name="fullName"
+          />
+          <span className="non-valid">{formError.name}</span>
+        </div>
+
+        <div className="data-field">
+          <label htmlFor="email" id="email" className="field-title">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="input-field contact-info"
+            value={reserve.email}
+            onChange={handleChange}
+            name="email"
+            placeholder="example@email.com"
+          />
+          <span className="non-valid">{formError.email}</span>
+        </div>
+        <div className="data-field">
+          <label
+            htmlFor="phone-number"
+            id="phone-number"
+            className="field-title"
+          >
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="phone-number"
+            className="input-field contact-info"
+            value={reserve.telephone}
+            onChange={handleChange}
+            name="telephone"
+            placeholder="000-000-0000"
+          />
+          <span className="non-valid">{formError.telephone}</span>
+        </div>
       </div>
 
-      <div className="data-field">
-        <label htmlFor="email" className="field-title">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          className="input-field contact-info"
-          value={reserve.email}
-          onChange={handleChange}
-          name="email"
-          placeholder="example@email.com"
-        />
-        <span className="non-valid">{formError.email}</span>
+      <div className="flex-box--column">
+        <div className="data-field">
+          <label
+            htmlFor="res-date"
+            id="res-date"
+            value={reserve.date}
+            className="field-title"
+          >
+            Choose a date
+          </label>
+          <input
+            type="date"
+            id="res-date"
+            name="date"
+            value={reserve.date}
+            onChange={handleChange}
+            className="input-field"
+          />
+          <span className="non-valid">{formError.date}</span>
+        </div>
+        <div className="data-field">
+          <label htmlFor="res-time" id="res-time" className="field-title">
+            Choose time
+          </label>
+          <select
+            value={reserve.time}
+            id="res-time"
+            onChange={handleChange}
+            name="time"
+            className="input-field"
+          >
+            <option value="17:00" className="time-option">
+              17:00
+            </option>
+            <option value="18:00" className="time-option">
+              18:00
+            </option>
+            <option value="19:00" className="time-option">
+              19:00
+            </option>
+            <option value="20:00" className="time-option">
+              20:00
+            </option>
+            <option value="21:00" className="time-option">
+              21:00
+            </option>
+            <option value="22:00" className="time-option">
+              22:00
+            </option>
+          </select>
+          <span className="non-valid">{formError.time}</span>
+        </div>
+        <div className="data-field">
+          <label htmlFor="guests" id="guests" className="field-title">
+            Number of guests
+          </label>
+          <input
+            type="number"
+            placeholder="1"
+            min="1"
+            max="10"
+            id="guests"
+            name="numOfGuests"
+            value={reserve.numOfGuests}
+            onChange={handleChange}
+            className="input-field"
+          />
+          <span className="non-valid">{formError.numOfGuests}</span>
+        </div>
       </div>
       <div className="data-field">
-        <label htmlFor="phone-number" className="field-title">
-          Phone Number
-        </label>
-        <input
-          type="tel"
-          id="phone-number"
-          className="input-field contact-info"
-          value={reserve.telephone}
-          onChange={handleChange}
-          name="telephone"
-          placeholder="000-000-0000"
-        />
-        <span className="non-valid">{formError.telephone}</span>
-      </div>
-      <div className="data-field">
-        <label htmlFor="res-date" value={reserve.date} className="field-title">
-          Choose a date
-        </label>
-        <input
-          type="date"
-          id="res-date"
-          name="date"
-          value={reserve.date}
-          onChange={handleChange}
-          className="input-field"
-        />
-        <span className="non-valid">{formError.date}</span>
-      </div>
-      <div className="data-field">
-        <label htmlFor="res-time" className="field-title">
-          Choose time
-        </label>
-        <select
-          value={reserve.time}
-          id="res-time"
-          onChange={handleChange}
-          name="time"
-          className="input-field"
-        >
-          <option value="17:00" className="time-option">
-            17:00
-          </option>
-          <option value="18:00" className="time-option">
-            18:00
-          </option>
-          <option value="19:00" className="time-option">
-            19:00
-          </option>
-          <option value="20:00" className="time-option">
-            20:00
-          </option>
-          <option value="21:00" className="time-option">
-            21:00
-          </option>
-          <option value="22:00" className="time-option">
-            22:00
-          </option>
-        </select>
-        <span className="non-valid">{formError.time}</span>
-      </div>
-      <div className="data-field">
-        <label htmlFor="guests" className="field-title">
-          Number of guests
-        </label>
-        <input
-          type="number"
-          placeholder="1"
-          min="1"
-          max="10"
-          id="guests"
-          name="numOfGuests"
-          value={reserve.numOfGuests}
-          onChange={handleChange}
-          className="input-field"
-        />
-        <span className="non-valid">{formError.numOfGuests}</span>
-      </div>
-      <div className="data-field">
-        <label htmlFor="occasion" className="field-title">
+        <label htmlFor="occasion" id="occasion" className="field-title">
           Occasion
         </label>
         <select

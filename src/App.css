@@ -53,7 +53,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.carousel-item {
+/* .carousel-item {
   height: 20rem;
   min-width: 100%;
   width: 100%;
@@ -63,12 +63,19 @@ body {
   gap: 2.4rem;
   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
   flex-shrink: 2;
-}
+} */
 
 .flex-box {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex-box--column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
 }
 
 .sm-flex-box {
@@ -296,6 +303,7 @@ body {
   height: 5rem;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 0.8rem;
 }
 
 .review-content {
@@ -343,6 +351,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4.8rem;
+}
+
+.user-info {
+  flex-direction: column;
+
+  gap: 3.2rem;
+  margin-bottom: 25rem;
+}
+
+.comment-field {
   flex-direction: column;
   gap: 4.8rem;
 }
@@ -418,8 +437,6 @@ body {
 }
 
 .occasion {
-  background-color: #dfe1fe;
-  border: none;
   padding: 0.8rem;
   text-align: center;
 }
