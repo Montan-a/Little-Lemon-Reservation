@@ -2,6 +2,7 @@ import customerImg_1 from "../img/user_1.jpeg";
 import customerImg_2 from "../img/user_2.jpeg";
 import customerImg_3 from "../img/user_3.jpeg";
 import customerImg_4 from "../img/Mario and Adrian A.jpeg";
+import { FadeIn } from "./ScrollAnimation.js";
 
 import { Card } from "@chakra-ui/react";
 import { ReviewForm } from "./ReviewForm.js";
@@ -34,7 +35,7 @@ export const customers = [
 ];
 export const UserReviews = () => {
   return (
-    <section className="review-section margin-bottom-xl-lg ">
+    <FadeIn className="review-section margin-bottom-xl-lg">
       <span className="heading">Review</span>
       <div className="review-container">
         {customers.map((customer) => (
@@ -56,6 +57,6 @@ export const UserReviews = () => {
         ))}
       </div>
       <ReviewForm />
-    </section>
+    </FadeIn>
   );
 };

@@ -1,5 +1,5 @@
 import { Header } from "./Header";
-import { Navigation } from "./Navigation";
+import { Navigation } from "../components/Navigation";
 
 export function NavBar() {
   return (

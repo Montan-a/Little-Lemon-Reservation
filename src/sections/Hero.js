@@ -1,7 +1,8 @@
 import restaurant from "../icons_assets/restaurant.jpg";
+import { FadeIn } from "../components/ScrollAnimation";
 export const Hero = () => {
   return (
-    <section className="hero-section">
+    <FadeIn className="hero-section">
       <div className="flex-box gap-sm">
         <div className="text-box">
           <span className="hero-title margin-bottom-xl-sm">Little Lemon</span>
@@ -18,6 +19,6 @@ export const Hero = () => {
           <img src={restaurant} alt="resturant interior" />
         </div>
       </div>
-    </section>
+    </FadeIn>
   );
 };

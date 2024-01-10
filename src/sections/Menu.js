@@ -1,7 +1,8 @@
-import { MenuCard } from "./MenuCard.js";
+import { MenuCard } from "../components/MenuCard.js";
 import greekSalad from "../icons_assets/greek-salad.jpg";
 import bruchetta from "../icons_assets/bruchetta.svg";
 import lemonCake from "../icons_assets/lemon dessert.jpg";
+import { FadeIn } from "../components/ScrollAnimation";
 
 const dishes = [
   {
@@ -28,7 +29,7 @@ const dishes = [
 
 export const Menu = () => {
   return (
-    <section className="menu-section container flex-box">
+    <FadeIn className="menu-section container flex-box">
       <div className="menu-heading">
         <h2 className="subheading">Today's Specials</h2>
         <button className="menu-btn">View the menu</button>
@@ -43,6 +44,6 @@ export const Menu = () => {
           />
         ))}
       </div>
-    </section>
+    </FadeIn>
   );
 };
