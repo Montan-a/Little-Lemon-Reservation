@@ -183,6 +183,10 @@ section {
   line-height: 1;
 }
 
+.img-box {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
 .img-box img {
   width: 50rem;
   height: 40rem;
