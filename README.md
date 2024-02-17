@@ -4,7 +4,7 @@ Meta Front-End Developer Certification Final Project
 
 ## Description
 
-This Project contains four sections and two pages. The site depicts a fictional Chicago restaurant
+This Project contains four sections and two pages. The site depicts a fictional Chicago restaurant and with built using React.js, Chakra-ui, and Yup.
 
 The first section consists of the a brief description of the restaurant
 and an image of the restaurants interior.
